@@ -1,8 +1,6 @@
 import sys
 import os
 import time
-import subprocess
-import urllib.request
 import pickle
 from functools import partial
 from PyQt4 import QtGui
@@ -49,7 +47,7 @@ class MDImg(QtGui.QWidget):
 
     def close(self):
         self.save_history()
-        super().close()
+        super(MDImg,self).close()
 
     def load_history(self):
         try:
@@ -109,7 +107,7 @@ class MDImg(QtGui.QWidget):
                 pyperclip.copy(md_url)
                 self.append_history(title, md_url)
 
-    # 处理七牛返回结果
+
     def parseRet(self,retData, respInfo):
         if retData != None:
             print("success")
@@ -134,12 +132,17 @@ class MDImg(QtGui.QWidget):
 
     def onClipChanged(self):
         if(QtGui.QApplication.clipboard().mimeData().hasImage()):
+
             image = QtGui.QApplication.clipboard().mimeData().imageData()
             if self.enableAction.isChecked():
                 try:
                     img_name = time.strftime('%Y-%m-%d-%H-%M-%S',time.localtime(time.time())) + ".png"
                     img_path = os.path.join(self.img_dir,img_name)
-                    image.save(img_path)
+                    try:
+                        image.save(img_path)
+                    except Exception as e:
+                        image.toPyObject().save(img_path)
+
                     url = self.get_url(img_name)
                     if QtGui.QSystemTrayIcon.supportsMessages():
                         self.tray.showMessage('Now Upload ...', img_name)
