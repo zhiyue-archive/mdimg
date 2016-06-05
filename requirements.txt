@@ -1,0 +1,2 @@
+pyperclip == 1.5.27
+qiniu == 7.0.7
