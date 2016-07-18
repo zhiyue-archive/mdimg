@@ -24,6 +24,8 @@ download from [realease page](https://github.com/zhiyue/mdimg/releases).
 
 ## qiniu setting
 Obtain relevant information from qiuniu.com
+
+`config.ini`
 ```
 access_key = your-access-key
 secret_key = your-secret-key
