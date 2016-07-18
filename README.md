@@ -22,7 +22,7 @@ download from [realease page](https://github.com/zhiyue/mdimg/releases).
 # How to use
 
 
-## qiuniu setting
+## qiniu setting
 Obtain relevant information from qiuniu.com
 ```
 access_key = your-access-key
