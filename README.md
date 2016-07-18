@@ -1,7 +1,7 @@
 # mdimg
 Automatically upload pictures to qiniu cloud storage
 
----
+![](show.gif)
 
 
 
@@ -17,7 +17,7 @@ pip install requirements.txt
 ## windows installtion
 download from [realease page](https://github.com/zhiyue/mdimg/releases).
 
----
+
 
 # How to use
 
