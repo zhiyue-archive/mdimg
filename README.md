@@ -1,18 +1,29 @@
 # mdimg
 Automatically upload pictures to qiniu cloud storage
 
+---
+
+
+
 
 # install
-##python 3
+
+## Install directly from the GitHub
 ```
+git clone https://github.com/zhiyue/mdimg
+cd mdimg
 pip install requirements.txt
 ```
-## windows
-download from realease.
-# use
-Obtain relevant information from qiuniu.com
+## windows installtion
+download from [realease page](https://github.com/zhiyue/mdimg/releases).
+
+---
+
+# How to use
+
 
 ## qiuniu setting
+Obtain relevant information from qiuniu.com
 ```
 access_key = your-access-key
 secret_key = your-secret-key
@@ -25,3 +36,4 @@ domain = your-custom-domain
 ```python
 python3 md_img.py
 ```
+
